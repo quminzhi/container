@@ -5,14 +5,14 @@ import (
 )
 
 func TestIntStack_Init(t *testing.T) {
-	is := Init()
+	is := InitIntStack()
 	if len(is) != 0 {
 		t.Errorf("len(is) = %d, want 0", len(is))
 	}
 }
 
 func TestIntStack_Peek(t *testing.T) {
-	is := Init()
+	is := InitIntStack()
 	is.Push(1)
 	if is.Peek() != 1 {
 		t.Errorf("Peek() = %d, want 1", is.Peek())
@@ -20,7 +20,7 @@ func TestIntStack_Peek(t *testing.T) {
 }
 
 func TestIntStack_Push(t *testing.T) {
-	is := Init()
+	is := InitIntStack()
 	is.Push(1)
 	if is.Peek().(int) != 1 {
 		t.Errorf("Peek() = %d, want 1", is.Peek().(int))
@@ -43,7 +43,7 @@ func TestIntStack_Push(t *testing.T) {
 }
 
 func TestIntStack_Pop(t *testing.T) {
-	is := Init()
+	is := InitIntStack()
 	is.Push(1)
 	is.Push(2)
 	is.Push(3)

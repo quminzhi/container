@@ -8,7 +8,7 @@ type Interface interface {
 
 type IntStack []int
 
-func Init() IntStack {
+func InitIntStack() IntStack {
 	is := make(IntStack, 0)
 	return is
 }
